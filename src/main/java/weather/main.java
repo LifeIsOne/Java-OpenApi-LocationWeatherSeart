@@ -12,6 +12,7 @@ public class main {
         System.out.println("선택한 구 : " + gu);
 
         System.out.print("읍•면•동 을(를) 입력하세요.");
+        System.out.print("[주례동, 가야동, 부전동] : ");
 
     }
 }

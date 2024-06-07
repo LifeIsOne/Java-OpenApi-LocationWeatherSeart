@@ -4,9 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
 public class DBConnection {
 
-    public static Connection getConnection() {
+    public static Connection getInstance() {
         String username = "root";
         String password = "1234";
         String url = "jdbc:mysql://localhost:3306/weatherdb";
