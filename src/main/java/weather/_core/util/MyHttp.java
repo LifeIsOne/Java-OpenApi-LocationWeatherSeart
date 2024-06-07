@@ -9,15 +9,15 @@ import java.net.http.HttpResponse;
 public class MyHttp {
     private static HttpClient httpClient = HttpClient.newHttpClient();
 
-    public static String get(String uri, String serviceKey, String baseDate, String baseTime, Integer nx, Integer ny) throws IOException, InterruptedException {
+    public static String get(String uri, String serviceKey, String baseDate, String baseTime, String nx, String ny) throws IOException, InterruptedException {
 
         String uriAndParams = "$uri?serviceKey=$serviceKey&base_date=$baseDate&base_time=$baseTime&nx=$nx&ny=$ny&dataType=json&pageNo=1&numOfRows=1000"
                 .replace("$uri", uri)
                 .replace("$serviceKey", serviceKey)
                 .replace("$baseDate", baseDate)
                 .replace("$baseTime", baseTime)
-                .replace("$nx", nx.toString())
-                .replace("$ny", ny.toString());
+                .replace("$nx", nx)
+                .replace("$ny", ny);
 
         System.out.println(uriAndParams);
 
