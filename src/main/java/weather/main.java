@@ -1,6 +1,9 @@
 package weather;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import weather._core.dao.WeatherDAO;
+import weather._core.data.WeatherDTO;
 import weather._core.data.WeatherVO;
 import weather._core.db.DBConnection;
 import weather._core.util.MyHttp;
@@ -41,6 +44,11 @@ public class main {
                     vo.nx,
                     vo.ny
             );
+            Gson gson = new Gson();
+            WeatherDTO dto = gson.fromJson(responseBody, WeatherDTO.class);
+
+            System.out.println(gu +"의 현재 온도는 : " + dto.response.body.items.item.get(3).obsrValue);
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
