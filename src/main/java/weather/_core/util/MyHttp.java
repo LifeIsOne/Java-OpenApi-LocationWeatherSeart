@@ -19,7 +19,7 @@ public class MyHttp {
                 .replace("$nx", nx)
                 .replace("$ny", ny);
 
-        System.out.println(uriAndParams);
+//        System.out.println(uriAndParams);
 
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
@@ -27,7 +27,7 @@ public class MyHttp {
                 .build();
 
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
+//        System.out.println(response.body());
         return response.body();
     }
 }

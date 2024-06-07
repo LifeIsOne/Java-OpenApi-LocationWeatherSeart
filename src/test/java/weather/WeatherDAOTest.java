@@ -35,6 +35,5 @@ public class WeatherDAOTest {
         System.out.println("nx : " + los.get("nx"));
         System.out.println("ny : " + los.get("ny"));
 
-
     }
 }
